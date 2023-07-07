@@ -1,7 +1,9 @@
-﻿using OnlineBookShop.models;
+﻿using OnlineBookShop.forms;
+using OnlineBookShop.models;
 using OnlineBookShop.repository;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,15 +18,11 @@ namespace OnlineBookShop
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmHome());
 
-            BookRepository a=new BookRepository();
 
-            Book b=new Book(3,"titluuu","authorr","comedie",69,23);
-
-            a.add(b);
 
         }
     }

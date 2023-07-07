@@ -39,6 +39,12 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.143\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.6.3.0\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -84,6 +90,8 @@
     <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.33\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -143,6 +151,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -152,21 +161,70 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\DataAcces.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="forms\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="forms\FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaces\IBook.cs" />
+    <Compile Include="interfaces\IUser.cs" />
+    <Compile Include="mockups\MockupCardBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mockups\MockupCardBook.Designer.cs">
+      <DependentUpon>MockupCardBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mockups\MockupHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mockups\MockupHome.Designer.cs">
+      <DependentUpon>MockupHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mockups\MockupMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mockups\MockupMain.Designer.cs">
+      <DependentUpon>MockupMain.cs</DependentUpon>
     </Compile>
     <Compile Include="models\Book.cs" />
+    <Compile Include="models\Imagini.cs" />
     <Compile Include="models\User.cs" />
+    <Compile Include="panels\PnlCardBook.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="panels\PnlChooseGenre.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="panels\PnlHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="panels\PnlHome.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="panels\PnlSlideShow.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="repository\BookRepository.cs" />
     <Compile Include="repository\UserRepository.cs" />
+    <EmbeddedResource Include="forms\FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mockups\MockupCardBook.resx">
+      <DependentUpon>MockupCardBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mockups\MockupHome.resx">
+      <DependentUpon>MockupHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mockups\MockupMain.resx">
+      <DependentUpon>MockupMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -175,6 +233,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="appsettings.json" />
     <None Include="packages.config" />
@@ -192,8 +251,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="mockups\" />
-    <Folder Include="panels\" />
+    <None Include="Resources\MV5BYmY3NGJlYTItYmQ4OS00ZTEwLWIzODItMjMzNWU2MDE0NjZhXkEyXkFqcGdeQXVyMzQzMDA3MTI%40._V1_.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -62,3 +62,9 @@ C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Deb
 C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Debug\OnlineBookShop.csproj.CopyComplete
 C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Debug\OnlineBookShop.exe
 C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Debug\OnlineBookShop.pdb
+C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\bin\Debug\FontAwesome.Sharp.dll
+C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\bin\Debug\FontAwesome.Sharp.Pro.dll
+C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Debug\OnlineBookShop.forms.FrmHome.resources
+C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Debug\OnlineBookShop.mockups.MockupMain.resources
+C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Debug\OnlineBookShop.mockups.MockupCardBook.resources
+C:\Data\programre-vizuala-csharp\Aplicatii\OnlineBookShop\OnlineBookShop\obj\Debug\OnlineBookShop.mockups.MockupHome.resources

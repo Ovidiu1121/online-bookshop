@@ -26,7 +26,7 @@ namespace OnlineBookShop.data
 
             using (IDbConnection connection = new MySqlConnection(connectionString))
             {
-
+                Console.WriteLine(connection);
                 connection.Execute(sqlstatement, parameters);
 
             }
